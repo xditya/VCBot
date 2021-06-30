@@ -1,0 +1,37 @@
+{
+    "name": "VCBot",
+    "description": "Just another Telegram VCBot, to stream songs in VC",
+    "keywords": [
+        "telegram",
+        "vc bot"
+    ],
+    "repository": "https://github.com/xditya/VCBot/",
+    "success_url": "https://t.me/BotzHub",
+    "env": {
+        "API_ID": {
+            "description": "Get this value from my.telegram.org!l",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get this value from my.telegram.org!",
+            "value": "",
+            "required": true
+        },
+        "SESSION": {
+            "description": "A pyrogram session, get this value by running python3 sessiongen.py locally.",
+            "value": "",
+            "required": true
+        },
+        "SUDOS": {
+            "description": "User ID of users who can use commands, split by space.",
+            "value": "",
+            "required": true
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ]
+}

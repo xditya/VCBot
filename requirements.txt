@@ -1,0 +1,3 @@
+py-tgcalls-wrapper
+python-decouple
+youtube-dl
