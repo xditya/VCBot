@@ -7,4 +7,4 @@ async def play_a_song(pycalls, message, song):
     try:
         await pycalls.stream(message.chat.id, song)
     except Exception as e:
-        await message.edit(f"ERROR:\n{e}")
+        await message.reply_text(f"ERROR:\n{e}")
