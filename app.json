@@ -23,6 +23,11 @@
             "value": "",
             "required": true
         },
+        "PREFIX": {
+            "description": "Userbot Prefix to run the commands. Add your own or keep as default (!)",
+            "value": "!",
+            "required": true
+        },
         "SUDOS": {
             "description": "User ID of users who can use commands, split by space.",
             "value": "",
