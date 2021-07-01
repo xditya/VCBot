@@ -96,5 +96,14 @@ async def resume(_, message):
     pycalls.resume(message.chat.id)
     await message.reply_text("Resumed playing.")
 
+@client.on_message(filters.me & filters.command("help", PREFIX) & filters.user(SUDO))
+async def help(_, message):
+    text = '\n on - Start Userbot'
+    text += '\n stream - play telegram song '
+    text += '\n pause - pause track'
+    text += '\n resume - Resumes the paused track'
+    await message.reply_text(text, parse_mode='html')
+
+
 logging.info("Started the bot.")
 pytgcalls.run()
