@@ -4,8 +4,7 @@ Fully working VC (user)Bot, based on py-tgcalls and py-tgcalls-wrapper with mini
 
 ## Deploying
 * To heroku:   
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)   
-Turn the dyno on and hope it works.   
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](http://heroku.com/deploy?template=https://github.com/xditya/VCBot)   
 
 * Local machine/VPS:   
 `git clone https://github.com/xditya/VCBot`   
@@ -36,3 +35,4 @@ Turn the dyno on and hope it works.
 - [pytgcalls-wrapper](https://github.com/callsmusic/pytgcalls-wrapper)   
 - [Pyrogram](https://github.com/pyrogram/pyrogram)   
 - [Me](https://github.com/xditya)   
+- Everyone who [contributed](https://github.com/xditya/VCBot/graphs/contributors).

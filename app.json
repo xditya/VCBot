@@ -7,6 +7,7 @@
     ],
     "repository": "https://github.com/xditya/VCBot/",
     "success_url": "https://t.me/BotzHub",
+    "stack": "container",
     "env": {
         "API_ID": {
             "description": "Get this value from my.telegram.org!l",
@@ -26,7 +27,7 @@
         "PREFIX": {
             "description": "Userbot Prefix to run the commands. Add your own or keep as default (!)",
             "value": "!",
-            "required": true
+            "required": false
         },
         "SUDOS": {
             "description": "User ID of users who can use commands, split by space.",
@@ -34,12 +35,10 @@
             "required": true
         }
     },
-    "buildpacks": [
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-        },
-        {
-            "url": "heroku/python"
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
         }
-    ]
+    }
 }
