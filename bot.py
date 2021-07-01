@@ -20,7 +20,7 @@ try:
     API_ID = config("API_ID")
     API_HASH = config("API_HASH")
     SUDOS = config("SUDOS")
-    PREFIX = config("PREFIX")
+    PREFIX = config("PREFIX", default="!")
 except Exception as e:
     logging.warning("Environment variables are missing!")
     logging.warning(f"\n{e}")
