@@ -10,11 +10,14 @@ Fully working VC (user)Bot, based on py-tgcalls and py-tgcalls-wrapper with mini
 `git clone https://github.com/xditya/VCBot`   
 `pip install -r requirements.txt`   
 `apt-get install ffmpeg`   
+`touch .env && nano .env`, fill in the vars as in [.env.sample](./.env.sample)   
 `python bot.py`   
 
-
+## SESSION
+Either run [sessiongen.py](./sessiongen.py) locally or run it on [repl.it by clicking here.](https://replit.com/@xditya/PyroSessionGen)
 ## Commands:   
 - `!on` - Check if the (user)bot is online.   
+- `!help` - Help message.   
 - `!stream` - Either give a youtube URL or reply to a telegram file to play it.   
 - `!pause` - Pause the stream.   
 - `!resume` - Yes, resume.   
@@ -27,7 +30,9 @@ Fully working VC (user)Bot, based on py-tgcalls and py-tgcalls-wrapper with mini
 (Contributions accepted, I'm lazy af.)    
 - A queue system.   
 - Play with song name.   
-- JoinVC/LeaveVC   
+- Auto-leave VC on song end.   
+- JoinVC/LeaveVC.   
+- Updater.   
 
 
 ## Credits
