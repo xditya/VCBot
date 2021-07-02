@@ -98,11 +98,13 @@ async def resume(_, message):
 
 @client.on_message(filters.me & filters.command("help", PREFIX) & filters.user(SUDO))
 async def help(_, message):
-    text = '\n on - Start Userbot'
-    text += '\n stream - play telegram song '
-    text += '\n pause - pause track'
-    text += '\n resume - Resumes the paused track'
-    await message.reply_text(text, parse_mode='html')
+    text = '**Available Commands:**\n'
+    text += '\n- `{x}on` - Start Userbot'
+    text += '\n- `{x}stream <url/reply to song file>` - __play song in vc.__ '
+    text += '\n- `{x} pause` - __pause track__'
+    text += '\n- `{x} resume` - __resumes the paused track__'
+    text +='\n\n**Support:** __@BotzHubChat__.'
+    await message.reply_text(text.format(x=PREFIX))
 
 
 logging.info("Started the bot.")
