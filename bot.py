@@ -99,6 +99,7 @@ async def resume(_, message):
     pycalls.resume(message.chat.id)
     await message.reply_text("Resumed playing.")
 
+
 @client.on_message(filters.me & filters.command("song", PREFIX) & filters.user(SUDO))
 def song(client, message): 
     query = ''
@@ -157,6 +158,19 @@ def song(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
+
+        
+@client.on_message(filters.me & filters.command("help", PREFIX) & filters.user(SUDO))
+async def help(_, message):
+    text = '**Available Commands:**\n'
+    text += '\n- `{x}on` - __check if the (user)bot is online.__'
+    text += '\n- `{x}stream <url/reply to song file>` - __play song in vc.__ '
+    text += '\n- `{x}pause` - __pause track.__'
+    text += '\n- `{x}resume` - __resumes the paused track.__'
+    text += '\n- {x}song <song name> - __donwload the song.__
+    text +='\n\n**Support:** __@BotzHubChat__.'
+    await message.reply_text(text.format(x=PREFIX))
+
 
 logging.info("Started the bot.")
 pytgcalls.run()
