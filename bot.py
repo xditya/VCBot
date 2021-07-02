@@ -96,5 +96,16 @@ async def resume(_, message):
     pycalls.resume(message.chat.id)
     await message.reply_text("Resumed playing.")
 
+@client.on_message(filters.me & filters.command("help", PREFIX) & filters.user(SUDO))
+async def help(_, message):
+    text = '**Available Commands:**\n'
+    text += '\n- `{x}on` - Start Userbot'
+    text += '\n- `{x}stream <url/reply to song file>` - __play song in vc.__ '
+    text += '\n- `{x} pause` - __pause track__'
+    text += '\n- `{x} resume` - __resumes the paused track__'
+    text +='\n\n**Support:** __@BotzHubChat__.'
+    await message.reply_text(text.format(x=PREFIX))
+
+
 logging.info("Started the bot.")
 pytgcalls.run()
